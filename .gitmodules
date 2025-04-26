@@ -1,0 +1,3 @@
+[submodule "recipe-recommender"]
+	path = recipe-recommender
+	url = https://github.com/Sidra-Tul-Muntaha2401/recipe-recommender.git
