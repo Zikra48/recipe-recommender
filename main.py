@@ -1,4 +1,24 @@
 from recipe import Recipe
+
+class RecipeBook:
+    def __init__(self):
+        self.recipes = []
+
+    def add_recipe(self, recipe):
+        self.recipes.append(recipe)
+
+    def find_recipes(self, available_ingredients):
+        matching_recipes = []
+        for recipe in self.recipes:
+            if all(ingredient in available_ingredients for ingredient in recipe.ingredients):
+                matching_recipes.append(recipe)
+        return matching_recipes
+
+class Recipe:
+    def __init__(self, name, ingredients, instructions):
+        self.name = name
+        self.ingredients = ingredients
+        self.instructions = instructions
 from recipe_book import RecipeBook
 
 book = RecipeBook()
